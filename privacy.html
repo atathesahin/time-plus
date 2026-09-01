@@ -23,43 +23,48 @@
 <body>
 <main>
   <h1>Time+ Privacy Policy</h1>
-  <p class="updated">Effective and last updated: August 23, 2026</p>
+  <p class="updated">Effective and last updated: September 1, 2026</p>
   <p>This Privacy Policy explains how the Time+ mobile application (the “Application”), provided by Atailay Sahin (the “Service Provider”), handles information.</p>
 
   <div class="summary">
-    <strong>Privacy summary:</strong> Time+ does not contain advertising. Optional Firebase Analytics is disabled by default and is enabled only when you allow usage analytics. Core productivity data such as categories, sessions, goals, and alarms is stored locally on your device. Cloud services are used for authentication, subscription management, and optional analytics.
+    <strong>Privacy summary:</strong> Time+ does not contain advertising. Optional Firebase Analytics is disabled by default and is enabled only when you allow usage analytics. Core productivity data is stored locally by default. Premium users may optionally enable Cloud Backup &amp; Sync, which stores categories, sessions, goals, and alarms in Firebase Cloud Firestore under their account. Cloud services are also used for authentication, subscription management, optional analytics, and optional Google Calendar synchronization.
   </div>
 
   <h2>Information processed</h2>
   <ul>
     <li><strong>Account information:</strong> email address, Firebase user ID, sign-in provider, and authentication metadata needed to create and secure your account.</li>
     <li><strong>Google Sign-In information:</strong> when selected, Google may provide your email address, display name, profile image, and a provider identifier to Firebase Authentication.</li>
+    <li><strong>Optional Google Calendar information:</strong> if a Premium user explicitly connects Google Calendar, Time+ creates a separate “Time+ Sessions” calendar and sends the title/category, start and end time, optional tag and notes of saved sessions to that calendar. Time+ receives and stores on the device the connected account email address, dedicated calendar identifier, and event identifiers needed to keep those Time+ sessions synchronized. The authorization scope is limited to calendars created by Time+; Time+ cannot list, download, or use events from the user's other calendars.</li>
     <li><strong>Purchase information:</strong> product, entitlement and subscription status, purchase and expiration timestamps, store transaction identifiers, and a pseudonymous customer identifier are processed by Google Play and RevenueCat.</li>
+    <li><strong>Optional cloud backup information:</strong> if a Premium user enables Cloud Backup &amp; Sync, categories, saved sessions (including optional notes and tags), goals, and alarms are stored in Firebase Cloud Firestore under that user's Firebase account identifier. This data is used only to back up and synchronize Time+ data across the user's devices.</li>
     <li><strong>Technical information:</strong> Firebase and other service providers may process IP address, device or app identifiers, user-agent information, diagnostics, and security metadata necessary to operate their services.</li>
     <li><strong>Optional analytics information:</strong> if you enable usage analytics, Firebase Analytics processes app sessions, opened Time+ features, app interactions, app version, device model, operating-system information, general geographic information, and a pseudonymous Firebase installation identifier. Time+ does not send email addresses, Firebase user IDs, notes, category names, alarm titles, or other productivity content to Analytics.</li>
     <li><strong>Support communications:</strong> information you include when contacting the Service Provider.</li>
   </ul>
 
-  <h2>Locally stored Time+ data</h2>
-  <p>Categories, sessions, notes, tags, timers, goals, alarms, theme and language preferences are stored on your device rather than on a Time+ server. This data does not automatically synchronize to another device. Export and import occur only when you initiate them and choose a file location.</p>
+  <h2>Time+ productivity data</h2>
+  <p>Categories, sessions, notes, tags, timers, goals, alarms, theme and language preferences are stored on your device by default. If a Premium user enables Cloud Backup &amp; Sync, categories, sessions, notes, tags, goals, and alarms are also stored in Firebase Cloud Firestore and synchronized across devices signed in to the same Time+ account. Theme, language, Google Calendar connection status, and linked Calendar event identifiers remain local. File export and import occur only when you initiate them and choose a file location.</p>
 
   <h2>How information is used</h2>
   <ul>
     <li>To create, authenticate, secure, and delete Time+ accounts.</li>
     <li>To provide, restore, and validate Premium subscriptions and enforce free-plan limits.</li>
     <li>To provide alarms, timers, local notifications, text-to-speech, export/import, and requested support.</li>
+    <li>If a Premium user opts in, to create a dedicated Time+ calendar and keep Time+ session events synchronized in it.</li>
+    <li>If a Premium user enables Cloud Backup &amp; Sync, to back up and synchronize the user's Time+ productivity data across their devices.</li>
     <li>If you opt in, to understand aggregated feature usage, evaluate the testing experience, and improve Time+.</li>
     <li>To prevent abuse, investigate failures, comply with law, and protect users and the Service Provider.</li>
   </ul>
   <p>Personal information is not sold. Time+ does not use personal information for third-party advertising.</p>
+  <p>Time+'s use and transfer of information received from Google APIs complies with the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p>
 
   <h2>Permissions and device features</h2>
-  <p>Time+ may request notification, exact alarm, full-screen alarm, vibration, wake-lock, boot-completed, and foreground-service capabilities so user-created timers and alarms can operate as intended. Text-to-speech is provided by the speech engine installed on your device. Permission use is limited to the related feature.</p>
+  <p>Time+ may request notification, exact alarm, full-screen alarm, vibration, wake-lock, boot-completed, and foreground-service capabilities so user-created timers and alarms can operate as intended. Text-to-speech is provided by the speech engine installed on your device. Google Calendar authorization is requested only after a Premium user selects the calendar feature. Permission use is limited to the related feature.</p>
 
   <h2>Service providers</h2>
   <ul>
-    <li><a href="https://policies.google.com/privacy">Google Play Services and Google Sign-In</a></li>
-    <li><a href="https://firebase.google.com/support/privacy">Firebase Authentication and optional Firebase Analytics</a></li>
+    <li><a href="https://policies.google.com/privacy">Google Play Services, Google Sign-In, and optional Google Calendar API</a></li>
+    <li><a href="https://firebase.google.com/support/privacy">Firebase Authentication, optional Firebase Analytics, and optional Cloud Firestore backup</a></li>
     <li><a href="https://www.revenuecat.com/privacy">RevenueCat</a></li>
   </ul>
   <p>These providers process information under their own privacy policies and may process data in countries other than yours using safeguards required by applicable law.</p>
@@ -67,10 +72,12 @@
   <h2>Retention and deletion</h2>
   <ul>
     <li>Local Time+ data remains on the device until you delete it in the app, clear app data, replace it during import, or uninstall the app.</li>
+    <li>Optional Cloud Backup &amp; Sync data remains in Firebase Cloud Firestore while the feature is used. Turning off synchronization stops future automatic synchronization but keeps the existing backup so it can be restored. Deleting the Time+ account in the app permanently deletes its cloud backup.</li>
     <li>Firebase account information remains until the account is deleted, subject to limited security or legal retention.</li>
     <li>Purchase and subscription records may be retained by Google Play, RevenueCat, or the Service Provider as required for subscription administration, restoration, fraud prevention, disputes, accounting, or law.</li>
     <li>Support correspondence is retained only as long as reasonably needed to resolve the request and meet legal obligations.</li>
     <li>Optional Analytics data is retained according to the retention settings of the Time+ Google Analytics property. Disabling Analytics stops future collection on that device.</li>
+    <li>Google Calendar events remain in the user's Google Calendar under Google's retention controls. While synchronization is enabled, deleting a linked Time+ session removes its linked calendar event. Turning off synchronization, uninstalling Time+, or deleting a Time+ account does not remove already-created Google Calendar events; users can delete those events directly in Google Calendar.</li>
   </ul>
   <p>Delete your account in Time+ under <strong>My Account → Delete My Account</strong>, or follow the external <a href="account-deletion.html">Account and Data Deletion instructions</a>. Deleting a Time+ account does not cancel an active Google Play subscription.</p>
 
@@ -81,7 +88,7 @@
   <p>Time+ is not directed to children under 13 or a higher minimum age required in their country. The Service Provider does not knowingly collect personal information from children in violation of applicable law. Contact the Service Provider to request removal if you believe a child provided personal information.</p>
 
   <h2>Your choices and rights</h2>
-  <p>Usage analytics is optional and disabled by default. You can allow or disable it at any time from the Time+ menu under <strong>Optional usage analytics</strong>. Depending on where you live, you may have rights to access, correct, delete, restrict, or object to processing of personal information. You may also withdraw consent where consent is the legal basis. Contact the Service Provider to exercise an applicable right.</p>
+  <p>Usage analytics is optional and disabled by default. You can allow or disable it at any time from the Time+ menu under <strong>Optional usage analytics</strong>. Google Calendar synchronization is also optional and can be connected or turned off from the Time+ menu. Turning it off stops future Calendar API use by Time+ on that device and keeps existing calendar events. Depending on where you live, you may have rights to access, correct, delete, restrict, or object to processing of personal information. You may also withdraw consent where consent is the legal basis. Contact the Service Provider to exercise an applicable right.</p>
 
   <h2>Changes</h2>
   <p>This policy may be updated when Time+ features, providers, or legal requirements change. The revised date will be shown at the top of this page.</p>
